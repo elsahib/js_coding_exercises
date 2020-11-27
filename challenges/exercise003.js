@@ -64,32 +64,7 @@ function duplicateNumbers(arr1, arr2) {
   result.sort(function(a, b){return a-b})
   return result
 }
-const menu = [
-  {
-    name: "tofu fritters",
-    ingredients: ["tofu", "egg yolk", "breadbrumbs", "paprika"]
-  },
-  {
-    name: "black bean curry",
-    ingredients: ["black beans", "garam masala", "rice"]
-  },
-  {
-    name: "chocolate tiffin",
-    ingredients: [
-      "dark chocolate",
-      "egg",
-      "flour",
-      "brown sugar",
-      "vanilla essence"
-    ]
-  },
-  {
-    name: "hummus",
-    ingredients: ["chickpeas", "tahini", "lemon", "garlic", "salt"]
-  }
-];
 
-console.log(checkIngredients(menu, "osman"));
 
 module.exports = {
   getSquares,
