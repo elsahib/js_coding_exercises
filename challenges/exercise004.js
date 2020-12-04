@@ -1,6 +1,5 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
   let result = [];
   nums.forEach(element => {
     if (element < 1){
@@ -13,10 +12,9 @@ function findSmallNums(nums) {
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
   let result = []
   names.forEach(element =>{
-    if ( element.charAt(0) == char){
+    if ( element.charAt(0) === char){
       result.push(element)
     }
   })
@@ -25,7 +23,6 @@ function findNamesBeginningWith(names, char) {
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
   let result = []
   words.forEach(element =>{
     let first3Letters = element.slice(0,3);
@@ -38,7 +35,6 @@ function findVerbs(words) {
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
   let result = []
   nums.forEach(element =>{
     if (Number.isInteger(element)){
@@ -50,7 +46,6 @@ function getIntegers(nums) {
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
   let result = []
   users.forEach(element => {
     if (element.data.city.displayName){
@@ -62,7 +57,6 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
   let result = []
   nums.forEach(element => {
     result.push(Math.round(Math.sqrt(element) *100)/100)
@@ -73,7 +67,6 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
   let result=[];
   sentences.forEach(element => {
     if (element.toLowerCase().includes(str.toLowerCase())){
@@ -85,7 +78,6 @@ return result
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  // Your code here
   let result= []
   triangles.forEach(element => {
     result.push(Math.max(...element))

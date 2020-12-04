@@ -4,6 +4,15 @@
  */
 const sumDigits = n => {
   if (n === undefined) throw new Error("n is required");
+  const intStr = n.toString();
+  const strArr = intStr.split("");
+  let result = 0;
+  strArr.forEach(element => {
+    result += parseInt(element);
+  });
+  console.log(result);
+
+  return result;
 };
 
 /**

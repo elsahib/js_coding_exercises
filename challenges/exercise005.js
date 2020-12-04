@@ -1,7 +1,6 @@
 const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
   let result = null
   let index = nums.indexOf(n)
   if (index >= 0 && index+1 < nums.length){
@@ -12,13 +11,12 @@ const findNextNumber = (nums, n) => {
 
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
   let ones=0,zeros=0;
   [...str].forEach(element =>{
     if (!isNaN(element)){
-      if (parseInt(element)==0){
+      if (parseInt(element)===0){
         zeros+=1
-      } else if (parseInt(element)==1){
+      } else if (parseInt(element)===1){
         ones+=1
       }
   }
@@ -28,7 +26,6 @@ return {1:ones, 0: zeros}
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
   let num2str = n.toString()
   let str2arr = num2str.split("")
   str2arr.reverse()
@@ -40,7 +37,6 @@ const reverseNumber = n => {
 
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
-  // Your code here!
   let result = 0;
   arrs.forEach(element =>{
     element.forEach(num =>{
@@ -52,7 +48,6 @@ const sumArrays = arrs => {
 
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
   if (arr.length >= 2){
     let first = arr[0]
     let last = arr[arr.length -1]
@@ -67,7 +62,6 @@ const arrShift = arr => {
 const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
-  // Your code here!
   let result = false;
   let valuesArr = Object.values(haystack)
   valuesArr.forEach(item =>{
@@ -80,7 +74,6 @@ return result
 
 const getWordFrequencies = str => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
   const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
   const count= (arr,value)=>{
     return arr.reduce((total,element)=>{
