@@ -92,23 +92,23 @@ describe("hexToRGB", () => {
 describe("findWinner", () => {
   test("return X if player X has won", () => {
     expect(findWinner([
-        ["X", "0", null],
-        ["X", null, "0"],
-        ["X", null, "0"]
+        ["X", "O", null],
+        ["X", null, "O"],
+        ["X", null, "O"]
        ])).toEqual("X");
       });
-  test("return 0 if player 0 has won", () => {    
+  test("return O if player O has won", () => {    
     expect(findWinner([
-      ["0", "X", null],
-      ["0", null, "X"],
-      ["0", null, "X"]
-     ])).toEqual("0");
+      ["O", "X", null],
+      ["O", null, "X"],
+      ["O", null, "X"]
+     ])).toEqual("O");
   });
   test("return null if no one wins", () => {    
     expect(findWinner([
-      ["0", "X", "X"],
-      ["X", "0", "0"],
-      ["0", "0", "X"]
+      ["O", "X", "X"],
+      ["X", "O", "O"],
+      ["O", "O", "X"]
      ])).toBe(null);
   });
 });
