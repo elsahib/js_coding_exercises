@@ -128,11 +128,9 @@ const findWinner = board => {
   });
   matches.forEach(set => {
     let first = boardMap[set[0]]
-    for (let i = 1; i <3; i ++){
-      if (boardMap[set[i]] === first && boardMap[set[i+1]] === first ){
+      if (boardMap[set[1]] === first && boardMap[set[2]] === first ){
         result = first
       }
-    }
   });
   return result;
 };
