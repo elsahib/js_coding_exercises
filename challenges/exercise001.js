@@ -30,7 +30,7 @@ function getSalePrice(originalPrice, reduction) {
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  return str.length % 2 == 1 ? str.charAt(str.length / 2) : str.substring(str.length / 2 - 1, str.length / 2 + 1)
+  return str.length % 2 === 1 ? str.charAt(str.length / 2) : str.substring(str.length / 2 - 1, str.length / 2 + 1)
 }
 
 function reverseWord(word) {
@@ -54,7 +54,7 @@ function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   let result = 0;
   users.forEach(user => {
-    if (user.type == "Linux") { result += 1 }
+    if (user.type === "Linux") { result += 1 }
   })
   return result
 }

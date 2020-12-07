@@ -5,7 +5,7 @@ function getFillings(sandwich) {
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error("person is required");
-  return person.city == "Manchester" ? true : false;
+  return person.city === "Manchester" ? true : false;
 }
 
 function getBusNumbers(people) {
@@ -17,7 +17,7 @@ function countSheep(arr) {
   if (arr === undefined) throw new Error("arr is required");
   let result = 0
   arr.forEach(element => {
-    if (element == "sheep") {
+    if (element === "sheep") {
       result += 1;
     }
 
