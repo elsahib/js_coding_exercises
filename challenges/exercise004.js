@@ -2,19 +2,19 @@ function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
   let result = [];
   nums.forEach(element => {
-    if (element < 1){
+    if (element < 1) {
       result.push(element)
-    } 
+    }
   });
-  return result  
+  return result
 }
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
   let result = []
-  names.forEach(element =>{
-    if ( element.charAt(0) === char){
+  names.forEach(element => {
+    if (element.charAt(0) === char) {
       result.push(element)
     }
   })
@@ -24,9 +24,9 @@ function findNamesBeginningWith(names, char) {
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
   let result = []
-  words.forEach(element =>{
-    let first3Letters = element.slice(0,3);
-    if (first3Letters === "to "){
+  words.forEach(element => {
+    let first3Letters = element.slice(0, 3);
+    if (first3Letters === "to ") {
       result.push(element)
     }
   })
@@ -36,8 +36,8 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   let result = []
-  nums.forEach(element =>{
-    if (Number.isInteger(element)){
+  nums.forEach(element => {
+    if (Number.isInteger(element)) {
       result.push(element)
     }
   })
@@ -48,7 +48,7 @@ function getCities(users) {
   if (!users) throw new Error("users is required");
   let result = []
   users.forEach(element => {
-    if (element.data.city.displayName){
+    if (element.data.city.displayName) {
       result.push(element.data.city.displayName)
     }
   });
@@ -59,7 +59,7 @@ function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   let result = []
   nums.forEach(element => {
-    result.push(Math.round(Math.sqrt(element) *100)/100)
+    result.push(Math.round(Math.sqrt(element) * 100) / 100)
   });
   return result
 }
@@ -67,18 +67,18 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  let result=[];
+  let result = [];
   sentences.forEach(element => {
-    if (element.toLowerCase().includes(str.toLowerCase())){
+    if (element.toLowerCase().includes(str.toLowerCase())) {
       result.push(element)
     }
   });
-return result
+  return result
 }
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  let result= []
+  let result = []
   triangles.forEach(element => {
     result.push(Math.max(...element))
   });

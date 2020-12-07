@@ -8,11 +8,11 @@ const sumMultiples = arr => {
   if (arr === undefined) throw new Error("arr is required");
   let result = 0;
   arr.forEach(element => {
-    if (element % 3 === 0 || element % 5 === 0){
-      result+=element;
+    if (element % 3 === 0 || element % 5 === 0) {
+      result += element;
     }
   });
-return result
+  return result
 };
 
 /**
@@ -23,12 +23,13 @@ return result
 const isValidDNA = str => {
   if (str === undefined) throw new Error("str is required");
   let result = true;
-  const dnaLetters = ["A","C","G","T"];
+  const dnaLetters = ["A", "C", "G", "T"];
   let strArr = str.split("");
   strArr.forEach(element => {
-    if (!dnaLetters.includes(element) && result=== true){
-  result = false;
-  }});
+    if (!dnaLetters.includes(element) && result === true) {
+      result = false;
+    }
+  });
   return result
 };
 
@@ -42,19 +43,19 @@ const getComplementaryDNA = str => {
   let result = "";
   let strArr = str.split("");
   strArr.forEach(element => {
-    switch(element){
-        case "A":
-          result += "T";
-          break;
-        case "T":
-          result += "A";
-          break;
-        case "C":
-          result += "G";
-          break;
-        case "G":
-          result += "C";
-          break;      
+    switch (element) {
+      case "A":
+        result += "T";
+        break;
+      case "T":
+        result += "A";
+        break;
+      case "C":
+        result += "G";
+        break;
+      case "G":
+        result += "C";
+        break;
     }
   });
   return result;
@@ -68,13 +69,13 @@ const getComplementaryDNA = str => {
 const isItPrime = n => {
   if (n === undefined) throw new Error("n is required");
   let result = true;
-  if (n < 2){
+  if (n < 2) {
     result = false;
   }
-  for (let i = 2; i <= Math.sqrt(n); i++){
-    if (n % i === 0){
-    result = false;
-  }
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      result = false;
+    }
   }
   return result;
 };
@@ -93,10 +94,10 @@ const isItPrime = n => {
 const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
-  let result =[];
-  for (let i = 0; i < n; i++){
-    result[i]=[]
-    for (let j = 0; j < n; j++){
+  let result = [];
+  for (let i = 0; i < n; i++) {
+    result[i] = []
+    for (let j = 0; j < n; j++) {
       result[i][j] = fill;
     }
   }
@@ -122,12 +123,12 @@ const areWeCovered = (staff, day) => {
   let result = 0;
   staff.forEach(staffMember => {
     let rota = staffMember.rota;
-      rota.forEach(dayOfRota => {
-        if (day===dayOfRota){
-          result +=1;
-        }
-      });
-    
+    rota.forEach(dayOfRota => {
+      if (day === dayOfRota) {
+        result += 1;
+      }
+    });
+
   });
   return result >= 3;
 };

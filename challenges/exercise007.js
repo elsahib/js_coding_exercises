@@ -25,8 +25,8 @@ const createRange = (start, end, step = 1) => {
   if (start === undefined) throw new Error("start is required");
   if (end === undefined) throw new Error("end is required");
   let result = [];
-  for (let i = start; i <= end; i +=step){
-result.push(i)
+  for (let i = start; i <= end; i += step) {
+    result.push(i)
   }
   return result;
 };
@@ -64,17 +64,18 @@ const getScreentimeAlertList = (users, date) => {
   if (users === undefined) throw new Error("users is required");
   if (date === undefined) throw new Error("date is required");
   let result = []
-  users.forEach(user =>{
+  users.forEach(user => {
     let sum = 0;
-    user.screenTime.forEach(day =>{
-      if(day.date === date){
+    user.screenTime.forEach(day => {
+      if (day.date === date) {
         let dayValues = Object.values(day.usage);
-      dayValues.forEach(value =>{
-        sum += value;
-      })}
-      })
-    if (sum >= 100){
-        result.push(user.username)
+        dayValues.forEach(value => {
+          sum += value;
+        })
+      }
+    })
+    if (sum >= 100) {
+      result.push(user.username)
     }
   })
   return result;
@@ -92,9 +93,9 @@ const getScreentimeAlertList = (users, date) => {
  */
 const hexToRGB = hexStr => {
   if (hexStr === undefined) throw new Error("hexStr is required");
-  let red = parseInt(hexStr.slice(1,3),16),
-      green = parseInt(hexStr.slice(3,5),16),
-      blue = parseInt(hexStr.slice(5,7),16);
+  let red = parseInt(hexStr.slice(1, 3), 16),
+    green = parseInt(hexStr.slice(3, 5), 16),
+    blue = parseInt(hexStr.slice(5, 7), 16);
 
   return `rgb(${red}, ${green}, ${blue})`;
 };
@@ -113,24 +114,24 @@ const findWinner = board => {
   if (board === undefined) throw new Error("board is required");
   let result = null;
   const matches = [
-    [1,4,7],
-    [2,5,8],
-    [3,6,9],
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-    [1,5,9],
-    [3,5,7]
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 5, 9],
+    [3, 5, 7]
   ];
-  let boardMap ={};
-  board.flat().forEach((element,index) => {
-    boardMap[index+1] = element    
+  let boardMap = {};
+  board.flat().forEach((element, index) => {
+    boardMap[index + 1] = element
   });
   matches.forEach(set => {
     let first = boardMap[set[0]]
-      if (boardMap[set[1]] === first && boardMap[set[2]] === first ){
-        result = first
-      }
+    if (boardMap[set[1]] === first && boardMap[set[2]] === first) {
+      result = first
+    }
   });
   return result;
 };
